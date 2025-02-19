@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .velicina{
+            height: 100px;
+        }
+        .kocka{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+        #mydiv{
+            width: 150;
+            height:150px;
+            background-color: red;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="velikiNaslov">dbngofuivpaf</h1>
+    <ul>
+        <li>nefwiop</li>
+        <li>nefwffvbztiop</li>
+        <li>nefwvtukujbtciop</li>
+        <li>nefwwegtg7u7u5eiop</li>
+        <li>nefw125679iop</li>
+        <li>nefw2314ghioluhzđžpšćpiop</li>
+    </ul>
+    <div class="kocka">
+    </div>
+    <div id="mydiv">MSG: <p id="msgDiv"></p></div>
+    <button class="botun">Pritisni me</button>
+    <p id="Top">jquery</p>
+    <p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p>
+    <p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p>
+    <p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p>
+    <p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p><p>jquery</p>
+    <a href="#Top">Vrati se na početak</a>
+    <script>
+        $(document).ready(function(){
+            $(".velikiNaslov").css("color","green");
+            $(".velikiNaslov").css({"backgroundColor":"yellow",
+                                    "border":"1px black solid"
+            });
+
+            $(".velikiNaslov").addClass("velicina");
+            //$(".velikiNaslov").removeClass("velicina");
+
+            $(".velikiNaslov").append("edrtfgzuhji");
+
+            $(".velikiNaslov").toggle("500");
+            $(".velikiNaslov").toggle("500");
+
+            $(".velikiNaslov").fadeOut("500");            
+            $(".velikiNaslov").fadeIn("500");
+
+            $(".velikiNaslov").slideUp("500");
+            $(".velikiNaslov").slideDown("500");
+
+            $("ul li").odd().addClass("highlight");
+            $("ul li").even().css("background-color","red");
+            $(".kocka").animate({
+                height:"200px",
+                width:"200px"
+            },5000);
+
+            $("div").bind("contextmenu",function(){
+                return false;
+            })
+             $("a[href='#top']").click(function(){
+                $("html, body").animate({
+                    scrollTop:0
+                }, "slow")
+             })
+            });
+            $("#mydiv").toggle(500)
+            $("#mydiv").toggle(500)
+            $("#mydiv").toggle(500)
+            $("#mydiv").toggle(500)
+            $("#mydiv").fadeOut(500)
+            $("#mydiv").fadeIn(500)
+
+            $("#mydiv").fadeIn(6000,function(){
+                $("#msgDiv").append("compladet");
+                $("#mydiv").css("background-color","green")
+            })
+            $(".botun").click(function(){
+                $(".botun").fadeOut();
+            })
+    </script>
+</body>
+</html>
