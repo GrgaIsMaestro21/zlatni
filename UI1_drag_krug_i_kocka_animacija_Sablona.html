@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dropzone</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+<style>
+body {
+	margin: 0;
+	background-color: #D5F7FF;
+}
+#circle {
+	width: 130px;
+	height: 130px;
+	background: #FF006C;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50%;
+	z-index: 2;
+	position: absolute;
+	left: 2%;
+	top: 3%;
+}
+#circle:hover {
+	cursor: move;
+}
+#circle:active {
+	transform: scale(1.2);
+	opacity: 0.8;
+}
+.circleok {
+	border: 5px solid white;
+}
+#boite {
+	width: 300px;
+	height: 300px;
+	background-color: #494B67;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20%;
+	margin: auto;
+}
+.boite-default {
+	border: 2px solid #FF006C;
+	box-shadow: 1px 1px 5px #888888;
+}
+.anim {
+	animation: tombe 1s ease;
+	animation-iteration-count: 2;
+}
+@keyframes tombe{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(90deg);
+	}
+
+}
+</style>
+</head>
+<body>
+
+<div id="circle"></div>
+<div id="boite"></div> 
+
+
+  
+<script>
+$(function() {
+$("#circle").draggble();
+
+$("#circle").draggble({
+	revert: "invalid",
+});	
+$("#boite").droppable({
+	accept: "#circle",
+	drop: function(event, ui){
+		$(this).addClass("anim");
+		$("#circle").addClass("circleok")
+	}
+})
+});
+</script>
+
+</body>
+</html>
